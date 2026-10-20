@@ -1,21 +1,11 @@
 <!DOCTYPE html>
-<!--
-  VERIFY BEFORE PUBLISHING (this table must match the Google Play Data safety form and the Privacy Policy):
-  1. [AD NETWORK] named correctly in every row.
-  2. Rows "IP address" and "Device and app information" were added to stay consistent with the Privacy Policy (the ad network may
-     collect them). Confirm against the SDK's documentation and the Data safety declarations; remove or adjust if not accurate.
-  3. "App interactions and crash logs" row: keep only if analytics/crash reporting is really in the build; name the service;
-     otherwise delete the row (and the mention in the Privacy Policy).
-  4. "Encrypted in transit (HTTPS)": confirm for the ad SDK (and any crash-reporting SDK) in the final build.
-  5. Consent prompt in EEA/UK and the "opt out of personalized ads" path (Settings > Privacy > Ads) are accurate.
-  6. Game progress is really stored only on the device.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ads &amp; Data in Unpredictable | Abyte Labs</title>
   <meta name="description" content="A plain table of exactly what data Unpredictable collects, why, who it is shared with, and what you can choose. Matches our Google Play Data safety form.">
+  <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#8EC8EE">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +49,7 @@
 
     <div class="section" style="padding-top:8px">
       <div class="container container-wide">
-        <p style="max-width:68ch">Unpredictable is free and shows ads, and has no accounts. The only outside service that receives data is the ad network, <strong>[AD NETWORK]</strong>. Your game progress stays on your device. For the full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p style="max-width:68ch">Unpredictable is free and shows ads, and has no accounts. The only outside service that receives data is the ad network, <strong>Google AdMob</strong> (Google LLC). We don't use any analytics or crash-reporting services. Your game progress stays on your device. For the full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
 
         <div class="table-wrap stack-table">
           <table class="data-table">
@@ -72,35 +62,35 @@
               <th scope="row">Advertising ID</th>
               <td data-label="Collected?" class="yes">Yes</td>
               <td data-label="Why">To show ads and measure how they perform</td>
-              <td data-label="Shared with">[AD NETWORK]</td>
+              <td data-label="Shared with">Google AdMob</td>
               <td data-label="Optional?">No, unless you opt out of personalized ads or reset your advertising ID (see below)</td>
             </tr>
             <tr>
               <th scope="row">IP address</th>
               <td data-label="Collected?" class="yes">Yes</td>
               <td data-label="Why">To serve and measure ads</td>
-              <td data-label="Shared with">[AD NETWORK]</td>
+              <td data-label="Shared with">Google AdMob</td>
               <td data-label="Optional?">No</td>
             </tr>
             <tr>
               <th scope="row">Approximate location (worked out from your IP address)</th>
               <td data-label="Collected?" class="yes">Yes</td>
               <td data-label="Why">To serve and measure ads</td>
-              <td data-label="Shared with">[AD NETWORK]</td>
+              <td data-label="Shared with">Google AdMob</td>
               <td data-label="Optional?">No</td>
             </tr>
             <tr>
               <th scope="row">Device and app information</th>
               <td data-label="Collected?" class="yes">Yes</td>
               <td data-label="Why">To serve and measure ads</td>
-              <td data-label="Shared with">[AD NETWORK]</td>
+              <td data-label="Shared with">Google AdMob</td>
               <td data-label="Optional?">No</td>
             </tr>
             <tr>
-              <th scope="row">App interactions and crash logs</th>
-              <td data-label="Collected?">[Yes – only if analytics or crash reporting is used; otherwise delete this row]</td>
-              <td data-label="Why">[e.g. To find and fix crashes]</td>
-              <td data-label="Shared with">[e.g. Firebase Crashlytics]</td>
+              <th scope="row">Ad interactions</th>
+              <td data-label="Collected?" class="yes">Yes</td>
+              <td data-label="Why">To serve and measure ads</td>
+              <td data-label="Shared with">Google AdMob</td>
               <td data-label="Optional?">No</td>
             </tr>
             <tr>
@@ -146,9 +136,10 @@
 
         <h2 id="choices">Your choices</h2>
         <ul style="max-width:68ch">
-          <li><strong>Reset your advertising ID</strong> in Android: Settings &gt; Privacy &gt; Ads.</li>
-          <li><strong>Opt out of personalized ads</strong> in the same place (Settings &gt; Privacy &gt; Ads).</li>
-          <li><strong>Consent prompt:</strong> in the EEA and UK we ask for your consent before personalized ads.</li>
+          <li><strong>Delete your advertising ID</strong> in Android: Settings &gt; Privacy &gt; Ads.</li>
+          <li><strong>Opt out of ads personalization</strong> in the same place (Settings &gt; Privacy &gt; Ads).</li>
+          <li><strong>Google ad settings:</strong> manage them at <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+          <li><strong>Consent prompt:</strong> in the European Economic Area, the UK and other regions where it's required, you'll see a consent prompt (Google's User Messaging Platform) before ads are personalized. You can change your choice later in the game's Settings.</li>
           <li><strong>Delete your data:</strong> see <a href="delete-data.html">Delete my data</a>.</li>
           <li><strong>Read the details:</strong> see the <a href="privacy.html">Privacy Policy</a>.</li>
         </ul>
@@ -187,7 +178,7 @@
       </nav>
       <div class="footer-meta">
         <p>© 2026 Abyte Labs</p>
-        <p><a href="mailto:[YOUR SUPPORT EMAIL]">[YOUR SUPPORT EMAIL]</a></p>
+        <p><a href="mailto:support.abytelabs@gmail.com">support.abytelabs@gmail.com</a></p>
       </div>
     </div>
   </footer>
