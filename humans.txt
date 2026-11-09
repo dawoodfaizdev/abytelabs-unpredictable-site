@@ -1,0 +1,12 @@
+/* STUDIO */
+    Abyte Labs: https://abytelabs.com/
+    Contact: support.abytelabs@gmail.com
+
+/* GAME */
+    Unpredictable: Cozy Runner, a one-thumb runner for Android
+    Made in Unity
+
+/* SITE */
+    Last update: 2026/11/07
+    Language: English
+    Fonts: Fredoka and Nunito (self-hosted)

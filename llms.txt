@@ -1,0 +1,15 @@
+# Unpredictable: Cozy Runner
+
+> Unpredictable is a free, cozy one-thumb runner for Android by Abyte Labs. Players run as one of eight friends (Sprig, Bun, Kit, Momo, Rex, Pip, Cap and Bolt), dress them up from a wardrobe, and run three roads full of fair surprises: jump and duck at the right moment, collect seeds, and see how far you get. It is in closed testing on Google Play.
+
+## Pages
+- [Home](https://unpredictable.abytelabs.com/): characters, wardrobe, roads and seeds
+- [Privacy policy](https://unpredictable.abytelabs.com/privacy.html)
+- [Ads & data](https://unpredictable.abytelabs.com/ads-and-data.html): exactly what data the game collects and why
+- [Delete your data](https://unpredictable.abytelabs.com/delete-data.html)
+- [Terms of use](https://unpredictable.abytelabs.com/terms.html)
+- [Support](https://unpredictable.abytelabs.com/support.html): email support.abytelabs@gmail.com
+
+## Studio
+- [Abyte Labs](https://abytelabs.com/): the studio behind the game
+- [Threads Puzzle: Mind Game](https://threadspuzzle.abytelabs.com/): the studio's other game

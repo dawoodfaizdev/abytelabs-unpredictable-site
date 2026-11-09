@@ -1,5 +1,17 @@
 /* Abyte Labs – shared stylesheet. Plain CSS, no build step.
-   Fonts are loaded in each page's <head> from Google Fonts (Fredoka + Nunito). */
+   Fonts: Fredoka + Nunito, self-hosted in assets/fonts (@font-face rules below). */
+
+/* Fredoka (headings) and Nunito (body), self-hosted (SIL Open Font License) so no visitor data goes to a font CDN. */
+@font-face { font-family: "Fredoka"; src: url(fonts/fredoka-latin-500-normal.woff2) format("woff2"); font-weight: 400 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fredoka"; src: url(fonts/fredoka-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fredoka"; src: url(fonts/fredoka-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url(fonts/nunito-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url(fonts/nunito-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url(fonts/nunito-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url(fonts/nunito-latin-800-normal.woff2) format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+/* metric-matched fallbacks: text keeps its size while the web fonts load, so nothing jumps when they arrive */
+@font-face{font-family:"Fredoka Fallback";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Roboto Bold"),local("Roboto");size-adjust:95.31%;ascent-override:102.2%;descent-override:24.76%;line-gap-override:0%}
+@font-face{font-family:"Nunito Fallback";src:local("Arial"),local("ArialMT"),local("Liberation Sans"),local("Roboto");size-adjust:101.96%;ascent-override:99.16%;descent-override:34.62%;line-gap-override:0%}
 
 :root {
   --sky: #8EC8EE;
@@ -277,3 +289,75 @@ details[open] { padding-bottom: 6px; }
 .lost svg { width: min(260px, 70%); height: auto; margin: 0 auto 8px; display: block; }
 .lost .lead { margin-inline: auto; }
 .lost .btn-row { justify-content: center; margin-top: 22px; }
+
+
+/* ---------- Studio family refresh (November 2026): Abyte Labs mark and intro, build 14 content ---------- */
+@font-face { font-family: "Recursive"; src: url(fonts/recursive-intro.woff2) format("woff2"); font-weight: 300 900; font-display: block; }
+html.ab-intro-pending body { visibility: hidden; }
+html.ab-intro-pending { background: #FFF8EE; }
+.ab-hidden-for-intro { visibility: hidden; }
+.logo-mark { overflow: visible; }
+.badge-link { text-decoration: none; transition: transform .15s ease; }
+.badge-link:hover { transform: translateY(-1px); }
+.studio-links a { font-weight: 700; }
+
+.hero-chips { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-chips li { margin: 0; padding: 5px 12px; border-radius: 999px; background: rgba(255,248,232,.75); border: 2px solid var(--brown); font-weight: 800; font-size: .92rem; }
+.hero-note { margin: 12px 0 0; font-weight: 700; }
+.hero-visual { position: relative; padding-bottom: 54px; }
+.squad { position: absolute; right: -6px; bottom: -4px; display: flex; align-items: flex-end; pointer-events: none; }
+.squad img { width: 92px; height: auto; margin-left: -26px; filter: drop-shadow(0 6px 0 rgba(74,44,42,.15)); animation: squad 2.4s ease-in-out 2; transform-origin: 50% 100%; } /* two hops, then still (moving content stops within 5 s) */
+.squad img:nth-child(2) { width: 108px; animation-delay: .3s; position: relative; z-index: 2; }
+.squad img:nth-child(3) { animation-delay: .6s; }
+@keyframes squad { 0%, 100% { transform: translateY(0); } 45% { transform: translateY(-10px) scale(.98, 1.03); } 60% { transform: translateY(0) scale(1.03, .97); } }
+@media (min-width: 860px) { .squad img { width: 118px; margin-left: -34px; } .squad img:nth-child(2) { width: 138px; } .squad { right: -26px; bottom: -18px; } }
+
+.gang { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 640px) { .gang { grid-template-columns: repeat(4, 1fr); } }
+.char { margin: 0; background: var(--cream-light); border: 2px solid var(--sand-deep); border-radius: var(--radius); padding: 14px 14px 16px; box-shadow: var(--shadow); text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform .2s ease; }
+.char:hover { transform: translateY(-4px) rotate(-1deg); }
+.char-pic { width: 100%; aspect-ratio: 1 / 1.05; border-radius: 16px; background: radial-gradient(circle at 50% 70%, var(--sky) 0 60%, #BFE2F5 61%); display: grid; place-items: end center; overflow: hidden; }
+.char-pic img { width: 78%; height: auto; margin-bottom: -4%; transition: transform .25s cubic-bezier(.34,1.56,.64,1); transform-origin: 50% 100%; }
+.char:hover .char-pic img { transform: translateY(-8px) scale(1.04); }
+.char h3 { margin: 12px 0 2px; font-size: 1.3rem; }
+.char p { margin: 0 0 10px; font-size: .95rem; color: var(--brown-soft); line-height: 1.45; }
+.pill { margin-top: auto; display: inline-block; padding: 3px 12px; border-radius: 999px; font-weight: 800; font-size: .82rem; background: var(--sand); }
+.pill-free { background: var(--orange); box-shadow: 0 2px 0 var(--orange-dark); }
+
+.wardrobe { display: grid; gap: 14px; margin-top: 18px; }
+.ward-row { display: grid; gap: 10px; align-items: center; background: var(--cream-light); border: 2px solid var(--sand); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+@media (min-width: 720px) { .ward-row { grid-template-columns: 140px 1fr; } }
+.ward-row h3 { margin: 0; font-size: 1.25rem; }
+.ward-row ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.ward-row li { margin: 0; text-align: center; font-weight: 700; font-size: .88rem; line-height: 1.3; }
+.ward-row img { width: 74px; height: 74px; margin: 0 auto 4px; display: block; border-radius: 18px; background: var(--cream); transition: transform .2s cubic-bezier(.34,1.56,.64,1); }
+.ward-row li:hover img { transform: translateY(-4px) rotate(-4deg) scale(1.06); }
+
+.roads { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 18px; }
+@media (min-width: 760px) { .roads { grid-template-columns: repeat(3, 1fr); } }
+.road { margin: 0; background: var(--cream-light); border: 2px solid var(--sand); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s ease; }
+.road:hover { transform: translateY(-4px); }
+.road img { display: block; width: 100%; height: auto; }
+.road-body { padding: 14px 18px 16px; }
+.road-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.road h3 { margin: 0; }
+.road p { margin: 6px 0 0; }
+.road-unlock { font-weight: 700; }
+.diff { padding: 3px 11px; border-radius: 999px; font-weight: 800; font-size: .82rem; border: 2px solid var(--brown); }
+.diff-easy { background: #CDEBB5; } .diff-medium { background: #FFD9A0; } .diff-hard { background: #FFC2B8; }
+
+.seeds .card { text-align: center; }
+.seeds .card img { width: 96px; height: 96px; margin: 0 auto 6px; display: block; }
+.seeds .card h3 { margin-top: .2em; }
+.seeds .card p { margin-bottom: 0; }
+.seeds-note { margin: 18px 0 0; font-weight: 700; text-align: center; }
+
+.more-card { display: flex; gap: 16px; align-items: center; text-decoration: none; transition: transform .2s ease; }
+.more-card:hover { transform: translateY(-3px); }
+.more-card img, .more-mark { width: 84px; height: 84px; flex: none; border-radius: 20px; }
+.more-mark { display: grid; place-items: center; background: #221824; }
+.more-svg { width: 64px; height: 64px; overflow: visible; }
+.more-card h3 { margin: 0 0 .2em; }
+.more-card p { margin: 0 0 .4em; color: var(--brown-soft); }
+.more-link { font-weight: 800; text-decoration: underline; text-decoration-color: var(--link-line); text-underline-offset: 3px; }
+:root { --font-head: "Fredoka", "Fredoka Fallback", "Trebuchet MS", system-ui, sans-serif; --font-body: "Nunito", "Nunito Fallback", system-ui, -apple-system, "Segoe UI", sans-serif; }

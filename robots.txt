@@ -1,0 +1,5 @@
+# robots.txt for unpredictable.abytelabs.com
+User-agent: *
+Allow: /
+
+Sitemap: https://unpredictable.abytelabs.com/sitemap.xml
